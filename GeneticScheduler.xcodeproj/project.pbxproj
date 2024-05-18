@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE562FBB2BF8C3ED003EEFAF /* GeneticSchedulerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE562FBA2BF8C3ED003EEFAF /* GeneticSchedulerApp.swift */; };
+		EE562FBD2BF8C3ED003EEFAF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE562FBC2BF8C3ED003EEFAF /* ContentView.swift */; };
+		EE562FBF2BF8C3EF003EEFAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE562FBE2BF8C3EF003EEFAF /* Assets.xcassets */; };
+		EE562FC22BF8C3EF003EEFAF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE562FC12BF8C3EF003EEFAF /* Preview Assets.xcassets */; };
+		EE562FCD2BF8C3EF003EEFAF /* GeneticSchedulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE562FCC2BF8C3EF003EEFAF /* GeneticSchedulerTests.swift */; };
+		EE562FD72BF8C3EF003EEFAF /* GeneticSchedulerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE562FD62BF8C3EF003EEFAF /* GeneticSchedulerUITests.swift */; };
+		EE562FD92BF8C3EF003EEFAF /* GeneticSchedulerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE562FD82BF8C3EF003EEFAF /* GeneticSchedulerUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE562FC92BF8C3EF003EEFAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE562FAF2BF8C3ED003EEFAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE562FB62BF8C3ED003EEFAF;
+			remoteInfo = GeneticScheduler;
+		};
+		EE562FD32BF8C3EF003EEFAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE562FAF2BF8C3ED003EEFAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE562FB62BF8C3ED003EEFAF;
+			remoteInfo = GeneticScheduler;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE562FB72BF8C3ED003EEFAF /* GeneticScheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeneticScheduler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE562FBA2BF8C3ED003EEFAF /* GeneticSchedulerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneticSchedulerApp.swift; sourceTree = "<group>"; };
+		EE562FBC2BF8C3ED003EEFAF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EE562FBE2BF8C3EF003EEFAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE562FC12BF8C3EF003EEFAF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EE562FC32BF8C3EF003EEFAF /* GeneticScheduler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GeneticScheduler.entitlements; sourceTree = "<group>"; };
+		EE562FC82BF8C3EF003EEFAF /* GeneticSchedulerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeneticSchedulerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE562FCC2BF8C3EF003EEFAF /* GeneticSchedulerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneticSchedulerTests.swift; sourceTree = "<group>"; };
+		EE562FD22BF8C3EF003EEFAF /* GeneticSchedulerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeneticSchedulerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE562FD62BF8C3EF003EEFAF /* GeneticSchedulerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneticSchedulerUITests.swift; sourceTree = "<group>"; };
+		EE562FD82BF8C3EF003EEFAF /* GeneticSchedulerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneticSchedulerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE562FB42BF8C3ED003EEFAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE562FC52BF8C3EF003EEFAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE562FCF2BF8C3EF003EEFAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE562FAE2BF8C3ED003EEFAF = {
+			isa = PBXGroup;
+			children = (
+				EE562FB92BF8C3ED003EEFAF /* GeneticScheduler */,
+				EE562FCB2BF8C3EF003EEFAF /* GeneticSchedulerTests */,
+				EE562FD52BF8C3EF003EEFAF /* GeneticSchedulerUITests */,
+				EE562FB82BF8C3ED003EEFAF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE562FB82BF8C3ED003EEFAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE562FB72BF8C3ED003EEFAF /* GeneticScheduler.app */,
+				EE562FC82BF8C3EF003EEFAF /* GeneticSchedulerTests.xctest */,
+				EE562FD22BF8C3EF003EEFAF /* GeneticSchedulerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE562FB92BF8C3ED003EEFAF /* GeneticScheduler */ = {
+			isa = PBXGroup;
+			children = (
+				EE562FBA2BF8C3ED003EEFAF /* GeneticSchedulerApp.swift */,
+				EE562FBC2BF8C3ED003EEFAF /* ContentView.swift */,
+				EE562FBE2BF8C3EF003EEFAF /* Assets.xcassets */,
+				EE562FC32BF8C3EF003EEFAF /* GeneticScheduler.entitlements */,
+				EE562FC02BF8C3EF003EEFAF /* Preview Content */,
+			);
+			path = GeneticScheduler;
+			sourceTree = "<group>";
+		};
+		EE562FC02BF8C3EF003EEFAF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EE562FC12BF8C3EF003EEFAF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EE562FCB2BF8C3EF003EEFAF /* GeneticSchedulerTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE562FCC2BF8C3EF003EEFAF /* GeneticSchedulerTests.swift */,
+			);
+			path = GeneticSchedulerTests;
+			sourceTree = "<group>";
+		};
+		EE562FD52BF8C3EF003EEFAF /* GeneticSchedulerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EE562FD62BF8C3EF003EEFAF /* GeneticSchedulerUITests.swift */,
+				EE562FD82BF8C3EF003EEFAF /* GeneticSchedulerUITestsLaunchTests.swift */,
+			);
+			path = GeneticSchedulerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE562FB62BF8C3ED003EEFAF /* GeneticScheduler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE562FDC2BF8C3EF003EEFAF /* Build configuration list for PBXNativeTarget "GeneticScheduler" */;
+			buildPhases = (
+				EE562FB32BF8C3ED003EEFAF /* Sources */,
+				EE562FB42BF8C3ED003EEFAF /* Frameworks */,
+				EE562FB52BF8C3ED003EEFAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeneticScheduler;
+			productName = GeneticScheduler;
+			productReference = EE562FB72BF8C3ED003EEFAF /* GeneticScheduler.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE562FC72BF8C3EF003EEFAF /* GeneticSchedulerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE562FDF2BF8C3EF003EEFAF /* Build configuration list for PBXNativeTarget "GeneticSchedulerTests" */;
+			buildPhases = (
+				EE562FC42BF8C3EF003EEFAF /* Sources */,
+				EE562FC52BF8C3EF003EEFAF /* Frameworks */,
+				EE562FC62BF8C3EF003EEFAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE562FCA2BF8C3EF003EEFAF /* PBXTargetDependency */,
+			);
+			name = GeneticSchedulerTests;
+			productName = GeneticSchedulerTests;
+			productReference = EE562FC82BF8C3EF003EEFAF /* GeneticSchedulerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EE562FD12BF8C3EF003EEFAF /* GeneticSchedulerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE562FE22BF8C3EF003EEFAF /* Build configuration list for PBXNativeTarget "GeneticSchedulerUITests" */;
+			buildPhases = (
+				EE562FCE2BF8C3EF003EEFAF /* Sources */,
+				EE562FCF2BF8C3EF003EEFAF /* Frameworks */,
+				EE562FD02BF8C3EF003EEFAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE562FD42BF8C3EF003EEFAF /* PBXTargetDependency */,
+			);
+			name = GeneticSchedulerUITests;
+			productName = GeneticSchedulerUITests;
+			productReference = EE562FD22BF8C3EF003EEFAF /* GeneticSchedulerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE562FAF2BF8C3ED003EEFAF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					EE562FB62BF8C3ED003EEFAF = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					EE562FC72BF8C3EF003EEFAF = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = EE562FB62BF8C3ED003EEFAF;
+					};
+					EE562FD12BF8C3EF003EEFAF = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = EE562FB62BF8C3ED003EEFAF;
+					};
+				};
+			};
+			buildConfigurationList = EE562FB22BF8C3ED003EEFAF /* Build configuration list for PBXProject "GeneticScheduler" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE562FAE2BF8C3ED003EEFAF;
+			productRefGroup = EE562FB82BF8C3ED003EEFAF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE562FB62BF8C3ED003EEFAF /* GeneticScheduler */,
+				EE562FC72BF8C3EF003EEFAF /* GeneticSchedulerTests */,
+				EE562FD12BF8C3EF003EEFAF /* GeneticSchedulerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE562FB52BF8C3ED003EEFAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE562FC22BF8C3EF003EEFAF /* Preview Assets.xcassets in Resources */,
+				EE562FBF2BF8C3EF003EEFAF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE562FC62BF8C3EF003EEFAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE562FD02BF8C3EF003EEFAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE562FB32BF8C3ED003EEFAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE562FBD2BF8C3ED003EEFAF /* ContentView.swift in Sources */,
+				EE562FBB2BF8C3ED003EEFAF /* GeneticSchedulerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE562FC42BF8C3EF003EEFAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE562FCD2BF8C3EF003EEFAF /* GeneticSchedulerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE562FCE2BF8C3EF003EEFAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE562FD92BF8C3EF003EEFAF /* GeneticSchedulerUITestsLaunchTests.swift in Sources */,
+				EE562FD72BF8C3EF003EEFAF /* GeneticSchedulerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE562FCA2BF8C3EF003EEFAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE562FB62BF8C3ED003EEFAF /* GeneticScheduler */;
+			targetProxy = EE562FC92BF8C3EF003EEFAF /* PBXContainerItemProxy */;
+		};
+		EE562FD42BF8C3EF003EEFAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE562FB62BF8C3ED003EEFAF /* GeneticScheduler */;
+			targetProxy = EE562FD32BF8C3EF003EEFAF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EE562FDA2BF8C3EF003EEFAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE562FDB2BF8C3EF003EEFAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		EE562FDD2BF8C3EF003EEFAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GeneticScheduler/GeneticScheduler.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GeneticScheduler/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = CodeLyoko.GeneticScheduler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		EE562FDE2BF8C3EF003EEFAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GeneticScheduler/GeneticScheduler.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GeneticScheduler/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = CodeLyoko.GeneticScheduler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		EE562FE02BF8C3EF003EEFAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = CodeLyoko.GeneticSchedulerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeneticScheduler.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GeneticScheduler";
+			};
+			name = Debug;
+		};
+		EE562FE12BF8C3EF003EEFAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = CodeLyoko.GeneticSchedulerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeneticScheduler.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GeneticScheduler";
+			};
+			name = Release;
+		};
+		EE562FE32BF8C3EF003EEFAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = CodeLyoko.GeneticSchedulerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = GeneticScheduler;
+			};
+			name = Debug;
+		};
+		EE562FE42BF8C3EF003EEFAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = CodeLyoko.GeneticSchedulerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = GeneticScheduler;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE562FB22BF8C3ED003EEFAF /* Build configuration list for PBXProject "GeneticScheduler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE562FDA2BF8C3EF003EEFAF /* Debug */,
+				EE562FDB2BF8C3EF003EEFAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE562FDC2BF8C3EF003EEFAF /* Build configuration list for PBXNativeTarget "GeneticScheduler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE562FDD2BF8C3EF003EEFAF /* Debug */,
+				EE562FDE2BF8C3EF003EEFAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE562FDF2BF8C3EF003EEFAF /* Build configuration list for PBXNativeTarget "GeneticSchedulerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE562FE02BF8C3EF003EEFAF /* Debug */,
+				EE562FE12BF8C3EF003EEFAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE562FE22BF8C3EF003EEFAF /* Build configuration list for PBXNativeTarget "GeneticSchedulerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE562FE32BF8C3EF003EEFAF /* Debug */,
+				EE562FE42BF8C3EF003EEFAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE562FAF2BF8C3ED003EEFAF /* Project object */;
+}
