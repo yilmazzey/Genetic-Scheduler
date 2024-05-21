@@ -17,7 +17,7 @@ import SwiftUI
 @main
 struct GeneticSchedulerApp: App {
     @StateObject private var sharedData = SharedDataModel()
-
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

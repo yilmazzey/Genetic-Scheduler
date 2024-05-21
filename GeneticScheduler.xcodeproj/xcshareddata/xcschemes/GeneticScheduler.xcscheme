@@ -58,7 +58,8 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
-      useCustomWorkingDirectory = "NO"
+      useCustomWorkingDirectory = "YES"
+      customWorkingDirectory = "/Users/goknurarican/Downloads/GeneticScheduler/GeneticScheduler"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
@@ -77,6 +78,21 @@
          <EnvironmentVariable
             key = "PYTHONPATH"
             value = "/Users/zeynep_yilmaz/Desktop/GeneticScheduler/myenv/python3.12/site-packages"
+            isEnabled = "NO">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "PYTHONPATH"
+            value = "/Users/goknurarican/my_python_project_env/lib/python3.12/site-packages"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "PYTHON_LIBRARY"
+            value = "/opt/homebrew/Cellar/python@3.12/3.12.3/Frameworks/Python.framework/Versions/3.12/lib/libpython3.12.dylib"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "PYTHON_EXECUTABLE"
+            value = "/Users/goknurarican/my_python_project_env/bin/python3"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>

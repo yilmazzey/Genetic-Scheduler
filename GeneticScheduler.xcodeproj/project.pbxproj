@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4CCF9B022BFD32D800B4F261 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCF9B012BFD32D800B4F261 /* ScheduleView.swift */; };
 		EE562FBB2BF8C3ED003EEFAF /* GeneticSchedulerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE562FBA2BF8C3ED003EEFAF /* GeneticSchedulerApp.swift */; };
 		EE562FBD2BF8C3ED003EEFAF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE562FBC2BF8C3ED003EEFAF /* ContentView.swift */; };
 		EE562FBF2BF8C3EF003EEFAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE562FBE2BF8C3EF003EEFAF /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4CCF9B012BFD32D800B4F261 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		EE562FB72BF8C3ED003EEFAF /* GeneticScheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeneticScheduler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE562FBA2BF8C3ED003EEFAF /* GeneticSchedulerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneticSchedulerApp.swift; sourceTree = "<group>"; };
 		EE562FBC2BF8C3ED003EEFAF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				EEEBF0C02BFA77DA00033D05 /* ReadInstructor.swift */,
 				EEEBF0C22BFA7A7100033D05 /* ReadRoom.swift */,
 				EEEBF0CA2BFA979C00033D05 /* OutputReader.swift */,
+				4CCF9B012BFD32D800B4F261 /* ScheduleView.swift */,
 				EEEBF0CC2BFA9F3C00033D05 /* SharedDataModel.swift */,
 			);
 			path = Model;
@@ -309,6 +312,7 @@
 				EEEBF0CD2BFA9F3C00033D05 /* SharedDataModel.swift in Sources */,
 				EEEBF0C32BFA7A7100033D05 /* ReadRoom.swift in Sources */,
 				EEEBF0CB2BFA979C00033D05 /* OutputReader.swift in Sources */,
+				4CCF9B022BFD32D800B4F261 /* ScheduleView.swift in Sources */,
 				EEEBF0C52BFA8E8F00033D05 /* ScheduleData.swift in Sources */,
 				EE65F2BF2BF9030600476923 /* ExistingSchedules.swift in Sources */,
 				EEEBF0C12BFA77DA00033D05 /* ReadInstructor.swift in Sources */,
@@ -477,7 +481,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GeneticScheduler/Preview Content\"";
-				DEVELOPMENT_TEAM = 56NP3BLS76;
+				DEVELOPMENT_TEAM = QZJ6SKS679;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -504,7 +508,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GeneticScheduler/Preview Content\"";
-				DEVELOPMENT_TEAM = 56NP3BLS76;
+				DEVELOPMENT_TEAM = QZJ6SKS679;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

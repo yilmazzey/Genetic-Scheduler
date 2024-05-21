@@ -5,17 +5,18 @@ struct GeneticScheduler: View {
     @State private var selectedTab = 0  // 0 for instructors, 1 for rooms
     @State private var showInstructorFileImporter = false
     @State private var showRoomFileImporter = false
+    @State private var instructorFilePath: String = ""
+    @State private var roomFilePath: String = ""
     @State private var showAlert = false
     @State private var alertMessage = ""
-    @State private var instructorFilePath: String?
-    @State private var roomFilePath: String?
+    @State private var navigateToSchedule = false
     @EnvironmentObject var sharedData: SharedDataModel
     
     init() {
-        let pythonLibrary = "/usr/local/bin/python3" // Adjust this path if needed
+        let pythonLibrary = "/opt/homebrew/Cellar/python@3.12/3.12.3/Frameworks/Python.framework/Versions/3.12/lib/libpython3.12.dylib"
         PythonLibrary.useLibrary(at: pythonLibrary)
     }
-    
+
     var body: some View {
         VStack {
             Picker(" ", selection: $selectedTab) {
@@ -81,6 +82,10 @@ struct GeneticScheduler: View {
             .foregroundColor(.white)
             .cornerRadius(10)
             .frame(maxWidth: .infinity, alignment: .trailing)
+            
+            NavigationLink(destination: ScheduleView().environmentObject(sharedData), isActive: $navigateToSchedule) {
+                EmptyView()
+            }
         }
         .padding()
         .alert(isPresented: $showAlert) {
@@ -92,47 +97,47 @@ struct GeneticScheduler: View {
         switch result {
         case .success(let url):
             do {
-                let path = url.path
-                print("File path: \(path)")  // Debugging line
-                
                 if type == "Instructor" {
-                    instructorFilePath = path
-                    try sharedData.loadInstructors(from: path)
+                    try sharedData.loadInstructors(from: url.path)
+                    instructorFilePath = url.path // Store file path
                 } else if type == "Room" {
-                    roomFilePath = path
-                    try sharedData.loadRooms(from: path)
+                    try sharedData.loadRooms(from: url.path)
+                    roomFilePath = url.path // Store file path
                 }
             } catch {
                 print("Error processing \(type) CSV: \(error)")
-                alertMessage = "Error processing \(type) CSV: \(error.localizedDescription)"
+                alertMessage = "Error processing \(type) CSV: \(error)"
                 showAlert = true
             }
         case .failure(let error):
             print("Failed to import \(type) CSV: \(error)")
-            alertMessage = "Failed to import \(type) CSV: \(error.localizedDescription)"
+            alertMessage = "Failed to import \(type) CSV: \(error)"
             showAlert = true
         }
     }
     
     func generateSchedule() {
-        guard let inputMLFile = instructorFilePath, let inputRoomFile = roomFilePath else {
+        guard !sharedData.instructors.isEmpty, !sharedData.rooms.isEmpty else {
             alertMessage = "Please import the data files first."
             showAlert = true
             return
         }
         
         let sys = Python.import("sys")
-        sys.path.append("/Users/zeynep_yilmaz/Desktop/genetic_algorithm_timetable-master/src")
+        sys.path.append("/Users/goknurarican/Downloads/genetic_algorithm_timetable-master/src")  // Adjust to your script directory
         
         do {
-            let timetableModule = try Python.attemptImport("main")
-            let outputFile = "/Users/zeynep_yilmaz/Desktop/genetic_algorithm_timetable-master/file/output.csv"
+            let timetableModule = Python.import("main")
+            let outputFile = "/Users/goknurarican/Downloads/genetic_algorithm_timetable-master/file/output.csv"
             
-            timetableModule.timetable(inputMLFile, inputRoomFile, outputFile)
+            timetableModule.timetable(instructorFilePath, roomFilePath, outputFile)
             print("Timetable generated successfully.")
             
             // Load the output file into the OutputReader
             try sharedData.loadSchedules(from: outputFile)
+            
+            // Navigate to the schedule view
+            navigateToSchedule = true
         } catch {
             print("Failed to run Python script: \(error)")
             alertMessage = "Failed to generate schedule. Please try again."

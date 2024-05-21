@@ -1,17 +1,29 @@
-# Author: Ha
-## Module: timetable
-
-# import other files
-## Swift adjustments made.
-import io_excel_file, generic_algorithm
+import os
+import io_excel_file
+import generic_algorithm
 from datetime import datetime
 import argparse
 
 def timetable(inputMLFile, inputRoomFile, outputFile):
+    # Print file paths to debug
+    print("Input ML File Path:", inputMLFile)
+    print("Input Room File Path:", inputRoomFile)
+    print("Output File Path:", outputFile)
+
+    # Ensure the paths are not too long and are valid
+    if len(inputMLFile) > 255 or len(inputRoomFile) > 255 or len(outputFile) > 255:
+        raise ValueError("One or more file paths are too long.")
+    
+    if not os.path.exists(inputMLFile):
+        raise FileNotFoundError(f"Input ML file not found: {inputMLFile}")
+    
+    if not os.path.exists(inputRoomFile):
+        raise FileNotFoundError(f"Input Room file not found: {inputRoomFile}")
+
     # get the data consisting of Malop and Room
     inputML = io_excel_file.read_ML(inputMLFile)
     inputRoom = io_excel_file.readRoom(inputRoomFile)
-
+    
     # run GA
     NumberOfLoop = 200
     
@@ -30,4 +42,4 @@ if __name__ == "__main__":
     
     args = parser.parse_args()
     
-    timetable("example.csv","inputRoom.csv", "output.csv")
+    timetable(args.inputMLFile, args.inputRoomFile, args.outputFile)
