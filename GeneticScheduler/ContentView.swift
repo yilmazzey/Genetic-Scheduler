@@ -1,11 +1,8 @@
 import SwiftUI
-import PythonKit
-
-
-
 
 struct ContentView: View {
     @State private var isAuthenticated = false
+    @EnvironmentObject var sharedData: SharedDataModel
 
     var body: some View {
         NavigationView {
@@ -20,6 +17,7 @@ struct ContentView: View {
 
 struct SidebarView: View {
     @Binding var isAuthenticated: Bool
+    @EnvironmentObject var sharedData: SharedDataModel
 
     var body: some View {
         List {
@@ -35,11 +33,15 @@ struct SidebarView: View {
                     .fontWeight(.bold)
                 Group {
                     NavigationLink(destination: GeneticScheduler()) {
-                        Label("Schedule generator", systemImage: "globe")
+                        Label("Schedule Generator", systemImage: "calendar")
                     }
                     
                     NavigationLink(destination: ExistingSchedules()) {
                         Label("Existing Schedules", systemImage: "rectangle.stack")
+                    }
+
+                    NavigationLink(destination: HowToUse()) {
+                        Label("How to Use", systemImage: "questionmark.circle")
                     }
                 }
                 
@@ -72,12 +74,13 @@ struct WelcomeView: View {
     @State private var password: String = ""
     @State private var showingAlert = false
     @State private var alertMessage = ""
+    @EnvironmentObject var sharedData: SharedDataModel
 
     let correctUserID = "123" // Hardcoded username
     let correctPassword = "123" // Hardcoded password
 
     var body: some View {
-        HStack(spacing: 20) {
+        HStack(spacing: 0) { // Adjust spacing to 0 to make it more rectangular
             VStack {
                 Spacer()
                 Spacer()
@@ -133,7 +136,11 @@ struct WelcomeView: View {
                 }
                 .padding()
                 .alert(isPresented: $showingAlert) {
-                    Alert(title: Text(alertMessage))
+                    Alert(title: Text(alertMessage), dismissButton: .default(Text("OK")) {
+                        if isAuthenticated {
+                            navigateToHowToUse()
+                        }
+                    })
                 }
 
                 Spacer()
@@ -155,11 +162,27 @@ struct WelcomeView: View {
         }
         showingAlert = true
     }
+
+    func navigateToHowToUse() {
+        // Navigate to HowToUse and ensure the sidebar can be toggled
+        if let window = NSApplication.shared.windows.first {
+            let contentView = NavigationView {
+                SidebarView(isAuthenticated: $isAuthenticated)
+                HowToUse()
+                    .navigationTitle("How to Use")
+            }
+            .environmentObject(sharedData)
+            window.contentView = NSHostingView(rootView: contentView)
+        }
+    }
 }
+
+    
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(SharedDataModel()) // Ensure the preview has access to the environment object
     }
 }
 

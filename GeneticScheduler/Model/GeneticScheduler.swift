@@ -1,5 +1,6 @@
 import SwiftUI
 import PythonKit
+import UniformTypeIdentifiers
 
 struct GeneticScheduler: View {
     @State private var selectedTab = 0  // 0 for instructors, 1 for rooms
@@ -12,9 +13,16 @@ struct GeneticScheduler: View {
     @State private var navigateToSchedule = false
     @EnvironmentObject var sharedData: SharedDataModel
     
+    @StateObject private var instructorCSVLoader = CSVLoader()
+    @StateObject private var roomCSVLoader = CSVLoader()
+
+    static let setupDone: Bool = {
+        setupPythonEnvironment()
+        return true
+    }()
+
     init() {
-        let pythonLibrary = "/opt/homebrew/Cellar/python@3.12/3.12.3/Frameworks/Python.framework/Versions/3.12/lib/libpython3.12.dylib"
-        PythonLibrary.useLibrary(at: pythonLibrary)
+        _ = GeneticScheduler.setupDone
     }
 
     var body: some View {
@@ -36,19 +44,14 @@ struct GeneticScheduler: View {
                 .background(Color.blue)
                 .foregroundColor(.white)
                 .cornerRadius(10)
-                .fileImporter(isPresented: $showInstructorFileImporter, allowedContentTypes: [.commaSeparatedText]) { result in
+                .fileImporter(isPresented: $showInstructorFileImporter, allowedContentTypes: [UTType.commaSeparatedText]) { result in
                     handleFileImport(result: result, type: "Instructor")
                 }
                 
-                List(sharedData.instructors) { instructor in
-                    VStack(alignment: .leading) {
-                        Text("Course ID: \(instructor.courseID)")
-                        Text("Teacher: \(instructor.teacher)")
-                        Text("Hours: \(instructor.numberOfHours)")
-                        Text("Class: \(instructor.studentClass)")
-                        Text("Course Name: \(instructor.courseName)")
-                        Text("Room Type: \(instructor.roomType)")
-                    }
+                if !instructorCSVLoader.headers.isEmpty {
+                    displayCSVContent(loader: instructorCSVLoader)
+                } else {
+                    Text("No data to display").foregroundColor(.gray)
                 }
             } else {
                 Button(action: {
@@ -60,15 +63,14 @@ struct GeneticScheduler: View {
                 .background(Color.green)
                 .foregroundColor(.white)
                 .cornerRadius(10)
-                .fileImporter(isPresented: $showRoomFileImporter, allowedContentTypes: [.commaSeparatedText]) { result in
+                .fileImporter(isPresented: $showRoomFileImporter, allowedContentTypes: [UTType.commaSeparatedText]) { result in
                     handleFileImport(result: result, type: "Room")
                 }
                 
-                List(sharedData.rooms) { room in
-                    VStack(alignment: .leading) {
-                        Text("Room: \(room.roomID)")
-                        Text("Room Type: \(room.roomType)")
-                    }
+                if !roomCSVLoader.headers.isEmpty {
+                    displayCSVContent(loader: roomCSVLoader)
+                } else {
+                    Text("No data to display").foregroundColor(.gray)
                 }
             }
             
@@ -92,31 +94,39 @@ struct GeneticScheduler: View {
             Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
         }
     }
+
+    private func displayCSVContent(loader: CSVLoader) -> some View {
+        List {
+            ForEach(loader.records) { record in
+                Text(record.columns.joined(separator: ", "))
+            }
+        }
+    }
     
-    func handleFileImport(result: Result<URL, Error>, type: String) {
+    private func handleFileImport(result: Result<URL, Error>, type: String) {
         switch result {
         case .success(let url):
             do {
                 if type == "Instructor" {
                     try sharedData.loadInstructors(from: url.path)
                     instructorFilePath = url.path // Store file path
+                    instructorCSVLoader.loadCSV(from: url) // Load CSV data
                 } else if type == "Room" {
                     try sharedData.loadRooms(from: url.path)
                     roomFilePath = url.path // Store file path
+                    roomCSVLoader.loadCSV(from: url) // Load CSV data
                 }
             } catch {
-                print("Error processing \(type) CSV: \(error)")
                 alertMessage = "Error processing \(type) CSV: \(error)"
                 showAlert = true
             }
         case .failure(let error):
-            print("Failed to import \(type) CSV: \(error)")
             alertMessage = "Failed to import \(type) CSV: \(error)"
             showAlert = true
         }
     }
     
-    func generateSchedule() {
+    private func generateSchedule() {
         guard !sharedData.instructors.isEmpty, !sharedData.rooms.isEmpty else {
             alertMessage = "Please import the data files first."
             showAlert = true
@@ -139,10 +149,14 @@ struct GeneticScheduler: View {
             // Navigate to the schedule view
             navigateToSchedule = true
         } catch {
-            print("Failed to run Python script: \(error)")
             alertMessage = "Failed to generate schedule. Please try again."
             showAlert = true
         }
+    }
+    
+    private static func setupPythonEnvironment() {
+        let pythonLibraryPath = "/opt/homebrew/Cellar/python@3.12/3.12.3/Frameworks/Python.framework/Versions/3.12/lib/libpython3.12.dylib"
+        PythonLibrary.useLibrary(at: pythonLibraryPath)
     }
 }
 
