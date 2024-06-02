@@ -3,6 +3,8 @@ import SwiftUI
 struct ContentView: View {
     @State private var isAuthenticated = false
     @EnvironmentObject var sharedData: SharedDataModel
+    @EnvironmentObject var ScheduleData: ScheduleData
+
 
     var body: some View {
         NavigationView {
@@ -182,7 +184,8 @@ struct WelcomeView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(SharedDataModel()) // Ensure the preview has access to the environment object
+            .environmentObject(SharedDataModel())
+            .environmentObject(ScheduleData())
     }
 }
 

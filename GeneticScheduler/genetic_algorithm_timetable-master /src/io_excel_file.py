@@ -1,9 +1,6 @@
-## Author: Ha
-## Module: io_excel_file
-
 import pandas
 
-# output: ["PhongHoc", "BuoiThuMay", "SoTietConLai", "LoaiPhong"]
+# output: ["Room", "RoomType"]
 def readRoom(fileDir):
     inputRoom = pandas.read_csv(fileDir)
 
@@ -18,16 +15,14 @@ def readRoom(fileDir):
 
     return result
 
-# output: ["Malop", "GiangVien", "Lop sinh vien", "Sotiet"]
+# output: ["CourseID", "Instructor", "Class", "Number of Sessions"]
 def read_ML(fileDir):
-    inputML = pandas.read_csv(fileDir).sort_values(by = 'So Tiet', ascending = False)
+    inputML = pandas.read_csv(fileDir).sort_values(by = 'Number of Sessions', ascending = False)
     return inputML.values.tolist()
 
-# print: ["Malop", "GiangVien", "Lop sinh vien", "Sotiet",
-#           "Phong Hoc", "Buoi Thu May", "Tiet bat dau",
-#           "Fit Giang Vien"]
+# print: ['CourseID', 'Instructor', 'Number of Sessions', 'Room', 'Day', 'Starting Block', 'Fit of Instructor', 'Class', 'Fit of Class', 'Credit', 'RoomType']
 def write_file(data, outputFile):
-    columns = ['ML', 'Giang Vien', 'So Tiet', 'Phong', 'Buoi', 'Tiet Bat Dau', 'Fit of Giang Vien', 'Lop Sinh Vien', 'Fit of Sinh Vien', 'HP', 'Loai Phong']
+    columns = ['CourseID', 'Instructor', 'Number of Sessions', 'Room', 'Day', 'Starting Block', 'Fit of Instructor', 'Class', 'Fit of Class', 'Credit', 'RoomType']
     df = pandas.DataFrame(data, columns=columns)
     df.to_csv(outputFile)
 

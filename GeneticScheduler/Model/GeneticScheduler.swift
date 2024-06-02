@@ -84,10 +84,6 @@ struct GeneticScheduler: View {
             .foregroundColor(.white)
             .cornerRadius(10)
             .frame(maxWidth: .infinity, alignment: .trailing)
-            
-            NavigationLink(destination: ScheduleView().environmentObject(sharedData), isActive: $navigateToSchedule) {
-                EmptyView()
-            }
         }
         .padding()
         .alert(isPresented: $showAlert) {
@@ -134,12 +130,13 @@ struct GeneticScheduler: View {
         }
         
         let sys = Python.import("sys")
-        sys.path.append("/Users/goknurarican/Downloads/genetic_algorithm_timetable-master/src")  // Adjust to your script directory
+        sys.path.append("/Users/zeynep_yilmaz/Documents/Genetic-Scheduler/GeneticScheduler/genetic_algorithm_timetable-master /src")  // Adjust to your script directory
         
         do {
             let timetableModule = Python.import("main")
-            let outputFile = "/Users/goknurarican/Downloads/genetic_algorithm_timetable-master/file/output.csv"
+            let outputFile = "/Users/zeynep_yilmaz/Documents/Genetic-Scheduler/GeneticScheduler/genetic_algorithm_timetable-master/file/output.csv"
             
+
             timetableModule.timetable(instructorFilePath, roomFilePath, outputFile)
             print("Timetable generated successfully.")
             

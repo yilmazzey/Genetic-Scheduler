@@ -33,7 +33,7 @@ def generic_algorithm (inputML, inputRoom, NumberOfLoop):
         if min(fit) == 0 or i == NumberOfLoop-1: #have already had the result
             print("The best fit score: ", min(fit))
             print("The number of loop: ", i+1)
-            break
+            break 
 
         # --- Selection ---
         selection(fit, temp_timetables)
@@ -58,7 +58,7 @@ def selection(fit, temp_timetables):
     Remover = len(temp_timetables) - NumberOfInit
 
     for i in range(0, Remover):
-        lessFit = 0
+        lessFit = 0 
         for j in range(1, len(fit)):
             if fit[j] > fit[lessFit]:
                 lessFit = j
@@ -67,7 +67,7 @@ def selection(fit, temp_timetables):
         del temp_timetables[lessFit]
 
 
-# select 2 best fit
+# select 2 best fit 
 # create (2) new crossovers by each itself and create 1 new crossover by both
 def crossover(fit, temp_timetables, NumberOfParent, room):
     print("-- Crossover --")
@@ -95,13 +95,13 @@ def mutation(fit, temp_timetables, ML, Room, room):
     if pick < maxDup//2:
         print("* Max mutation *")
 
-        # delete all element of temp_timetables and run initialization again
+        # delete all element of temp_timetables and run initialization again  
         # avoid the local maximum
         if maxDup >= len(fit)-1:
             print("* Best Mutation *")
             temp_timetables.clear()
         
-        # make N mutation element
+        # make N mutation element  
         for i in range(0, maxDup):
             newTempTimetable = []
             while newTempTimetable == []:

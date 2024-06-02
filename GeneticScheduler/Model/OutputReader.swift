@@ -35,19 +35,18 @@ class OutputReader {
         let csv = try CSV<Enumerated>(url: URL(fileURLWithPath: path)) // Create CSV object using CSV<Enumerated>
         self.data = csv.rows.map { row in
             Course(
-                courseID: row[0],
-                teacher: row[1],
-                room: row[2],
-                blockPosition: row[3],
-                beginningPoint: row[4],
-                numberOfHours: Int(row[5]) ?? 0,
-                studentClass: row[6],
-                courseName: row[7],
-                roomType: row[8]
+                courseID: row[1],
+                teacher: row[2],
+                room: row[3],
+                blockPosition: row[4],
+                beginningPoint: row[5],
+                numberOfHours: Int(row[6]) ?? 0,
+                studentClass: row[7],
+                courseName: row[8],
+                roomType: row[9]
             )
         }
     }
-
     // Method to get schedules for a specific instructor
     func getSchedules(for instructor: String) -> [Course] {
         return data.filter { $0.teacher.lowercased().contains(instructor.lowercased()) }
